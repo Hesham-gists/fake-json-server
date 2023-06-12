@@ -25,6 +25,8 @@ app.get("/json/:filename", async (req, res) => {
       })
     );
 
+    result = sortWithDate(result);
+
     result = getSlice(result, page, size);
 
     res.status(200).json({ result, count: result.length });
@@ -32,6 +34,13 @@ app.get("/json/:filename", async (req, res) => {
     res.status(400).json(error);
   }
 });
+
+function sortWithDate(arr = []) {
+  return [...arr].sort(
+    (a, b) =>
+      new Date(a.sentDateTime).getTime() - new Date(b.sentDateTime).getTime()
+  );
+}
 
 function getSlice(arr = [], page = 1, size = 10) {
   const startIndex = (page - 1) * size;
