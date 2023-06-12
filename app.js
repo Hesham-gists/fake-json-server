@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { log } = require("console");
 const express = require("express");
 const { readFile } = require("fs/promises");
@@ -36,6 +37,6 @@ function getSlice(arr = [], page = 1, size = 10) {
 
 app.use(express.json());
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   log("listening...");
 });
