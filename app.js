@@ -1,10 +1,14 @@
 require("dotenv").config();
 const { log } = require("console");
 const express = require("express");
+const cors = require("cors");
 const { readFile } = require("fs/promises");
 const { join } = require("path");
 
 const app = express();
+
+app.use(cors({ credentials: true, origin: ["http://localhost:4200"] }));
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.status(200).json({ msg: "Fake server working..." });
@@ -34,8 +38,6 @@ function getSlice(arr = [], page = 1, size = 10) {
   const endIndex = page * size;
   return [...arr].slice(startIndex, endIndex);
 }
-
-app.use(express.json());
 
 app.listen(process.env.PORT || 3000, () => {
   log("listening...");
