@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.get("/json/:filename", async (req, res) => {
   const { filename } = req.params;
-  const { page, size, userId } = req.query;
+  const { page, size, userId, sort } = req.query;
 
   try {
     let result = JSON.parse(
@@ -25,10 +25,8 @@ app.get("/json/:filename", async (req, res) => {
       })
     );
 
-    result = sortWithDate(result);
-
+    result = sortWithDate(result, sort);
     result = getSlice(result, page, size);
-
     result = getByUserId(result, userId);
 
     res.status(200).json({ result, count: result.length });
@@ -37,11 +35,15 @@ app.get("/json/:filename", async (req, res) => {
   }
 });
 
-function sortWithDate(arr = []) {
-  return [...arr].sort(
-    (a, b) =>
-      new Date(a.sentDateTime).getTime() - new Date(b.sentDateTime).getTime()
-  );
+function sortWithDate(arr = [], sort) {
+  if (!sort) return [...arr];
+  return [...arr].sort((a, b) => {
+    if (sort === "asc") {
+      return new Date(a.sentDate).getTime() - new Date(b.sentDate).getTime();
+    } else {
+      return new Date(b.sentDate).getTime() - new Date(a.sentDate).getTime();
+    }
+  });
 }
 
 function getSlice(arr = [], page = 1, size = 10) {
@@ -50,9 +52,9 @@ function getSlice(arr = [], page = 1, size = 10) {
   return [...arr].slice(startIndex, endIndex);
 }
 
-function getByUserId(arr, id) {
+function getByUserId(arr = [], id) {
   if (!id) return [...arr];
-  return [...arr].filter((i) => i.userId === id);
+  return [...arr].filter((i) => i.userId === +id);
 }
 
 app.listen(process.env.PORT || 3000, () => {
