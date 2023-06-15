@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.get("/json/:filename", async (req, res) => {
   const { filename } = req.params;
-  const { page, size } = req.query;
+  const { page, size, userId } = req.query;
 
   try {
     let result = JSON.parse(
@@ -28,6 +28,8 @@ app.get("/json/:filename", async (req, res) => {
     result = sortWithDate(result);
 
     result = getSlice(result, page, size);
+
+    result = getByUserId(userId);
 
     res.status(200).json({ result, count: result.length });
   } catch (error) {
@@ -46,6 +48,11 @@ function getSlice(arr = [], page = 1, size = 10) {
   const startIndex = (page - 1) * size;
   const endIndex = page * size;
   return [...arr].slice(startIndex, endIndex);
+}
+
+function getByUserId(arr, id) {
+  if (!id) return [...arr];
+  return [...arr].filter((i) => i.id === id);
 }
 
 app.listen(process.env.PORT || 3000, () => {
