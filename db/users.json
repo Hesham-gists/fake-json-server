@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "image": "assets/images/random/01.png",
+    "name": "User 1",
+    "inHandover": true,
+    "lastMessage": "Last message from User 1"
+  },
+  {
+    "id": 2,
+    "image": "assets/images/random/02.png",
+    "name": "User 2",
+    "inHandover": false,
+    "lastMessage": "Last message from User 2"
+  },
+  {
+    "id": 3,
+    "image": "assets/images/random/03.png",
+    "name": "User 3",
+    "inHandover": true,
+    "lastMessage": "Last message from User 3"
+  },
+  {
+    "id": 4,
+    "image": "assets/images/random/04.png",
+    "name": "User 4",
+    "inHandover": false,
+    "lastMessage": "Last message from User 4"
+  },
+  {
+    "id": 5,
+    "image": "assets/images/random/05.png",
+    "name": "User 5",
+    "inHandover": true,
+    "lastMessage": "Last message from User 5"
+  },
+  {
+    "id": 6,
+    "image": "assets/images/random/06.png",
+    "name": "User 6",
+    "inHandover": false,
+    "lastMessage": "Last message from User 6"
+  },
+  {
+    "id": 7,
+    "image": "assets/images/random/07.png",
+    "name": "User 7",
+    "inHandover": true,
+    "lastMessage": "Last message from User 7"
+  },
+  {
+    "id": 8,
+    "image": "assets/images/random/08.png",
+    "name": "User 8",
+    "inHandover": false,
+    "lastMessage": "Last message from User 8"
+  },
+  {
+    "id": 9,
+    "image": "assets/images/random/09.png",
+    "name": "User 9",
+    "inHandover": true,
+    "lastMessage": "Last message from User 9"
+  },
+  {
+    "id": 10,
+    "image": "assets/images/random/10.png",
+    "name": "User 10",
+    "inHandover": false,
+    "lastMessage": "Last message from User 10"
+  },
+  {
+    "id": 11,
+    "image": "assets/images/random/11.png",
+    "name": "User 11",
+    "inHandover": true,
+    "lastMessage": "Last message from User 11"
+  },
+  {
+    "id": 12,
+    "image": "assets/images/random/12.png",
+    "name": "User 12",
+    "inHandover": false,
+    "lastMessage": "Last message from User 12"
+  },
+  {
+    "id": 13,
+    "image": "assets/images/random/13.png",
+    "name": "User 13",
+    "inHandover": true,
+    "lastMessage": "Last message from User 13"
+  },
+  {
+    "id": 14,
+    "image": "assets/images/random/14.png",
+    "name": "User 14",
+    "inHandover": false,
+    "lastMessage": "Last message from User 14"
+  },
+  {
+    "id": 15,
+    "image": "assets/images/random/15.png",
+    "name": "User 15",
+    "inHandover": true,
+    "lastMessage": "Last message from User 15"
+  },
+  {
+    "id": 16,
+    "image": "assets/images/random/16.png",
+    "name": "User 16",
+    "inHandover": false,
+    "lastMessage": "Last message from User 16"
+  },
+  {
+    "id": 17,
+    "image": "assets/images/random/17.png",
+    "name": "User 17",
+    "inHandover": true,
+    "lastMessage": "Last message from User 17"
+  },
+  {
+    "id": 18,
+    "image": "assets/images/random/18.png",
+    "name": "User 18",
+    "inHandover": false,
+    "lastMessage": "Last message from User 18"
+  },
+  {
+    "id": 19,
+    "image": "assets/images/random/19.png",
+    "name": "User 19",
+    "inHandover": true,
+    "lastMessage": "Last message from User 19"
+  },
+  {
+    "id": 20,
+    "image": "assets/images/random/20.png",
+    "name": "User 20",
+    "inHandover": false,
+    "lastMessage": "Last message from User 20"
+  }
+]
