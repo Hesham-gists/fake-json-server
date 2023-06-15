@@ -29,7 +29,7 @@ app.get("/json/:filename", async (req, res) => {
 
     result = getSlice(result, page, size);
 
-    result = getByUserId(userId);
+    result = getByUserId(result, userId);
 
     res.status(200).json({ result, count: result.length });
   } catch (error) {
