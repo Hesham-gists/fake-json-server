@@ -52,7 +52,7 @@ function getSlice(arr = [], page = 1, size = 10) {
 
 function getByUserId(arr, id) {
   if (!id) return [...arr];
-  return [...arr].filter((i) => i.id === id);
+  return [...arr].filter((i) => i.userId === id);
 }
 
 app.listen(process.env.PORT || 3000, () => {
